@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {box-sizing: border-box;}
+    *::before, *::after {box-sizing: border-box;}
+    body{
+        margin: 0;
+    }
+    #buttons {
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+    #buttons > button {
+      margin-bottom: 10px;
+      padding: 4px 8px;
+    }
+    #demo2 {
+      display: none;
+    }
+    #demo {
+      position: fixed;
+      height: 50vh;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow-y: auto;
+    }
+    #demo::-webkit-scrollbar {
+      display: none;
+    }
+    .layout{
+        display: flex;
+    }
+    .option{
+        height: 100vh;
+        width: 50%;
+    }
+    .contain{
+        /* background-color: #333333; */
+        width: 50%;
+    }
+  </style>
+<body>
+    <style id="demo2"></style>
+    <div class="layout">
+        <div class="option">
+            <div id="demo"></div>
+            <div id="buttons">
+                <button id="btnPause">暂停</button>
+                <button id="btnPlay">播放</button>
+                <button id="btnSlow">慢速</button>
+                <button id="btnNormal">中速</button>
+                <button id="btnFast">快速</button>
+              </div>
+        </div>
+        <div class="contain">
+            <div class="land">
+                <div class="ground"></div>
+                <div class="sun"></div>
+                <div class="stars"></div>
+                <div class="stars"></div>
+                <div class="mountain"></div>
+                <div class="mountain"></div>
+                <div class="mountain"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src='main.js'></script>
+</body>
+</html>
